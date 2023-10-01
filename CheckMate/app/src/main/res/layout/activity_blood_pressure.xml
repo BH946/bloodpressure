@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.BloodPressure.BloodPressureActivity">
+
+    <ImageButton
+        android:id="@+id/bloodPressureReportButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_base_settings_24"
+        android:backgroundTint="@color/gray_button"
+        app:layout_constraintBottom_toBottomOf="@id/bloodPressureButton"
+        app:layout_constraintLeft_toRightOf="@id/bloodPressureButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bloodPressureButton"/>
+
+    <TextView
+        android:id="@+id/bloodPressureTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="혈압측정"
+        android:textColor="@color/black_text"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <ImageView
+        android:id="@+id/bloodPressureCircleProgressBar"
+        android:background="@drawable/ic_base_check_24"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="200sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/bloodPressureResultTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "수축기 :\n이완기 :\n맥박수 :"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:textColor="@color/black_text"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bloodPressureResultTextView"
+        app:layout_constraintBottom_toBottomOf="@id/bloodPressureResultTextView"
+        app:layout_constraintTop_toTopOf="@id/bloodPressureResultTextView" />
+
+    <TextView
+        android:id="@+id/bloodPressureResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/red_layout"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        tools:text="120\n70\n80"
+        app:layout_constraintTop_toBottomOf="@id/bloodPressureTextView"
+        app:layout_constraintBottom_toTopOf="@id/bloodPressureButton"
+        app:layout_constraintLeft_toRightOf="@id/bloodPressureResultTextView2"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/bloodPressureTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:text="측정이 완료되었습니다!"
+        android:textColor="@color/black_text"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bloodPressureCircleProgressBar" />
+
+    <Button
+        android:id="@+id/bloodPressureButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/ic_base_button"
+        android:text="완료"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bloodPressureReportButton"
+        />
+
+<!--    app:layout_constraintTop_toBottomOf="bloodPressureTextView"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

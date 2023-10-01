@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TodayMission.TodayMissionOption.TodayMissionOptionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/blue_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180sp">
+
+        <TextView
+            android:id="@+id/userIdTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="사용자님,"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_marginTop="30sp"
+            android:layout_marginLeft="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="효율적인 건강관리를 위해\n정보를 입력해 주세요."
+            app:layout_constraintTop_toBottomOf="@id/userIdTextView"
+            app:layout_constraintStart_toStartOf="@id/userIdTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/gray_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/gray_layout"
+            android:id="@+id/todayMissionRecyclerView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/resultButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:id="@+id/resultButton"
+            android:textSize="25sp"
+            android:text="완료"
+            android:textStyle="bold"
+            android:textColor="@color/gray_text"
+            android:layout_margin="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/ic_base_button"
+            android:backgroundTint="@color/gray_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

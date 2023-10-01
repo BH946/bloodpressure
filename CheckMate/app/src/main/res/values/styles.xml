@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name = "calTitleStyle">
+    <item name="android:textSize">30dp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/black_text</item>
+</style>
+
+<style name = "calDayStyle" parent="android:TextAppearance.Theme">
+    <item name="android:textColor">@color/black_text</item>
+</style>
+
+
+</resources>
